@@ -43,6 +43,10 @@ def main():
             if player.collision(ast):
                 print("Game Over!")
                 sys.exit(0)
+            for bull in shots: 
+                if bull.collision(ast):
+                    ast.split()
+                    bull.kill()
             
         pygame.display.flip()
         dt = clock.tick(60) / 1000

@@ -25,4 +25,9 @@ class CircleShape(pygame.sprite.Sprite):
         vector = pygame.math.Vector2.distance_to(self.position, colltest.position)
         radius = self.radius + colltest.radius
         return vector <= radius
+    
+    def bulletcoll(self, colltest):
+        vector = pygame.math.Vector2.distance_to(self.position, colltest.position)
+        radius = self.radius + colltest.radius
+        return vector <= radius
             
